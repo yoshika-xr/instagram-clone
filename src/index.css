@@ -1,7 +1,13 @@
-.w-20{
-  width:20%;
+.w-20 {
+  width: 20%;
 }
 
-.w-30{
-  width:30%;
+.w-30 {
+  width: 30%;
+}
+.textimg {
+  width: 120px;
+}
+.bi{
+  margin-right: 10px;
 }
