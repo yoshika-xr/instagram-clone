@@ -5,9 +5,9 @@
       "user": {
         "id": 101,
         "username": "john_doe",
-        "profile_pic": "src/assets/profile1.jpg"
+        "profile_pic": "src/assets/profile1.jpeg"
       },
-      "image": "src/assets/post1.jpg",
+      "image": "src/assets/post1.jpeg",
       "caption": "Beautiful sunset 🌅 #Nature",
       "likes": 120,
       "comments": [
@@ -27,7 +27,7 @@
       "user": {
         "id": 102,
         "username": "alex_dev",
-        "profile_pic": "src/assets/profile2.jpg"
+        "profile_pic": "src/assets/profile2.jpeg"
       },
       "image": "src/assets/post2.jpg",
       "caption": "Coding vibes 💻🔥",
@@ -46,3 +46,5 @@
     }
   ]
 }
+
+

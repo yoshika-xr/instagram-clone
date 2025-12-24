@@ -1,13 +1,12 @@
 import React from 'react'
 import Story from './Story'
+import Posts from './Posts'
 
 function Feed() {
   return (
     <div>
         <div><Story /></div>
-        <div>
-            f
-        </div>
+        <div><Posts /></div>
     </div>
   )
 }
