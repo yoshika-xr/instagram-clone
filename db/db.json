@@ -1,0 +1,48 @@
+{
+  "posts": [
+    {
+      "id": 1,
+      "user": {
+        "id": 101,
+        "username": "john_doe",
+        "profile_pic": "src/assets/profile1.jpg"
+      },
+      "image": "src/assets/post1.jpg",
+      "caption": "Beautiful sunset 🌅 #Nature",
+      "likes": 120,
+      "comments": [
+        {
+          "user": "alice_wonder",
+          "comment": "Wow! Amazing shot 📸"
+        },
+        {
+          "user": "mark_92",
+          "comment": "Where is this place?"
+        }
+      ],
+      "timestamp": "2025-02-11T14:30:00Z"
+    },
+    {
+      "id": 2,
+      "user": {
+        "id": 102,
+        "username": "alex_dev",
+        "profile_pic": "src/assets/profile2.jpg"
+      },
+      "image": "src/assets/post2.jpg",
+      "caption": "Coding vibes 💻🔥",
+      "likes": 98,
+      "comments": [
+        {
+          "user": "john_doe",
+          "comment": "Clean setup 👌"
+        },
+        {
+          "user": "mark_92",
+          "comment": "Love this!"
+        }
+      ],
+      "timestamp": "2025-02-12T10:15:00Z"
+    }
+  ]
+}
