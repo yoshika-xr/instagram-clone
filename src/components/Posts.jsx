@@ -10,7 +10,18 @@ function Posts() {
   },[]);
 
   return (
-    <div>{posts.length > 0 ? (<div>post</div>):( <div>loading...</div>)}</div>
+    <div>{posts.length > 0 ? (<div>
+      {posts.map((post)=>(
+        <div key={post.id}>
+          <div className="d-flex">
+            <img className="dp rounded-circle" src={post.user.profile_pic} alt="profilepic"/>
+            <h5>{post.user.username}</h5>
+          </div>
+          <div><img src={post.image} alt=""  /></div>
+          
+        </div>
+      ))}
+      </div>):( <div>loading...</div>)}</div>
   );
 }
 
