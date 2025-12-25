@@ -1,21 +1,17 @@
-import React, { useEffect, useState } from 'react'
+import React, { useEffect, useState } from "react";
 
 function Posts() {
-
-    const [Posts,setPosts]=useState();
-    useEffect(()=>{
-        fetch('//localhost:3000/posts')
-        then((data)=>{data.json})
-        then((data =>setPosts(data))).
-        catch(err =>console.log(err))
-    })
+  const [posts, setPosts] =useState([]);
+  useEffect(()=>{
+    fetch('http://localhost:3000/posts').
+    then((data) => data.json()).
+    then((data) => setPosts(data)).
+    catch(err => console.log(err));
+  },[]);
 
   return (
-    <div>
-
-
-    </div>
-  )
+    <div>{posts.length > 0 ? (<div>post</div>):( <div>loading...</div>)}</div>
+  );
 }
 
-export default Posts
+export default Posts;
