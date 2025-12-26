@@ -10,14 +10,14 @@ function Posts() {
   },[]);
 
   return (
-    <div>{posts.length > 0 ? (<div>
+    <div className="d-flex justify-content-center">{posts.length > 0 ? (<div>
       {posts.map((post)=>(
-        <div key={post.id}>
+        <div className="my-3" key={post.id}>
           <div className="d-flex">
             <img className="dp rounded-circle" src={post.user.profile_pic} alt="profilepic"/>
-            <h5>{post.user.username}</h5>
+            <h6 className="mt-2">{post.user.username}</h6>
           </div>
-          <div><img className="post" src={post.image} alt=""  /></div>
+          <div><img className="image" src={post.image} alt=""  /></div>
           <div>
             <i className="bi bi-heart"></i>
             <i className="bi bi-chat"></i>

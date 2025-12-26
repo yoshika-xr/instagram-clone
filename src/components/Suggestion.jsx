@@ -1,9 +1,27 @@
-import React from 'react'
+import React, { useEffect, useState } from "react";
 
 function Suggestion() {
+  const [profile, setProfile] = useState(null);
+  const [suggestion,setsuggestion]=useState([])
+  
+  useEffect(() => {
+    fetch("http://localhost:3000/posts")
+      .then((data) => data.json())
+      .then((data) => setProfile(data)).
+      catch(error => console.log(err));
+  },[]);
   return (
-    <div>Suggestion</div>
-  )
+    <div>
+      <div className="d-flex">
+        <img
+          className="dp rounded-circle"
+          src={post.user.profile_pic}
+          alt="profilepic"
+        />
+        <h6 className="mt-2">{post.user.username}</h6>
+      </div>
+    </div>
+  );
 }
 
-export default Suggestion
+export default Suggestion;
