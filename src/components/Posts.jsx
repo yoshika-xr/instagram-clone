@@ -17,7 +17,14 @@ function Posts() {
             <img className="dp rounded-circle" src={post.user.profile_pic} alt="profilepic"/>
             <h5>{post.user.username}</h5>
           </div>
-          <div><img src={post.image} alt=""  /></div>
+          <div><img className="post" src={post.image} alt=""  /></div>
+          <div>
+            <i className="bi bi-heart"></i>
+            <i className="bi bi-chat"></i>
+            <i className="bi bi-send"></i>
+          </div>
+          <b>{post.likes} Likes</b>
+          <div>{post.caption}</div>
           
         </div>
       ))}
