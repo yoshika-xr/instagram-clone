@@ -27,6 +27,7 @@ function Suggestion() {
             />
           <h6 className="mt-2">{profile.username}</h6>
           <small className="ms-auto text-primary">Switch</small>
+          <p>suggestion for you</p><b>See All</b>
         </div>
       ) : (
         <p>loading...</p>
