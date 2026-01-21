@@ -15,6 +15,7 @@ function Suggestion() {
       .then((data) => setSuggestion(data))
       .catch((err) => console.log(err));
   }, []);
+
   return (
     <div>
       <div className="suggestion w-75 m-4">
@@ -31,26 +32,28 @@ function Suggestion() {
         ) : (
           <p>loading...</p>
         )}
+
         <div className="d-flex m-3">
           <p>suggestion for you</p>
           <b className="ms-auto">See All</b>
         </div>
 
-        {suggestions .length > 0 ? (
-          <div>{suggestions.map((suggestion) => {
-            <div key={suggestion.id}>
-              <div>
+        {suggestions.length > 0 ? (
+          <div>
+            {suggestions.map((suggestion) => (
+              <div key={suggestion.id} className="d-flex mb-2">
                 <img
                   className="dp rounded-circle"
                   src={suggestion.profile_pic}
                   alt="profilepic"
                 />
-                <h6 className="mt-2">{suggestion.username}</h6>
+                <h6 className="mt-2 ms-2">{suggestion.username}</h6>
               </div>
-            </div>
-          })}
-            </div>
-        ):(<p>loading...</p>)}
+            ))}
+          </div>
+        ) : (
+          <p>loading...</p>
+        )}
       </div>
     </div>
   );
