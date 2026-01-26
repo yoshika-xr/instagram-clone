@@ -48,6 +48,7 @@ function Suggestion() {
                   alt="profilepic"
                 />
                 <h6 className="mt-2 ms-2">{suggestion.username}</h6>
+                <small className="ms-auto text-primary">Follow</small>
               </div>
             ))}
           </div>
