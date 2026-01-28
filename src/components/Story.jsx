@@ -14,7 +14,9 @@ function Story() {
       {Storys.length > 0 ? (
         Storys.map((story) => (
           <div key={story.id}>
+            <div className="gradiant-border">
             <img src={story.user.profile_pic} alt="dp" className="story-dp rounded-circle"></img>
+            </div>
             <h4 className="fs-6 text-truncate" style={{width:"40px"}}>{story.user.username}</h4>
           </div>
         ))
