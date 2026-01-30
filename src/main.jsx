@@ -4,13 +4,13 @@ import App from './App.jsx'
 import View from './components/View.jsx'
 import { createBrowserRouter,RouterProvider } from 'react-router-dom'
 
-const router=createBrowserRouter([
+const router = createBrowserRouter([
   {
     path:'/',
-    element:<App/>
+    element:<App />
   },
   {
-    path:'/view',
+    path:'/view/:id',
     element:<View />
   }
 ])
