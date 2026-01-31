@@ -4,16 +4,23 @@ import { useParams } from "react-router-dom";
 function View() {
   const { id } = useParams();
   const [vstory, setVstory] = useState(null);
-  useEffect(()=>{
+  useEffect(() => {
     fetch(`http://localhost:3000/story/${id}`)
-      .then(data => data.json())
-      .then(data => setVstory(data))
-      .catch(err => console.log(err));
+      .then((data) => data.json())
+      .then((data) => setVstory(data))
+      .catch((err) => console.log(err));
   }, []);
 
   return (
     <div>
-      {vstory ? <div>{vstory.user.username}</div> : <div>Loading....</div>}
+      {vstory ? (
+        <div>
+          {/* <img src={vstory.image}></img> */}
+          {vstory.profile_pic}
+        </div>
+      ) : (
+        <div>Loading....</div>
+      )}
     </div>
   );
 }

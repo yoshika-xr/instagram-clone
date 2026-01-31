@@ -93,28 +93,19 @@
   "story": [
     {
       "id": 1,
-      "user": {
-        "id": 101,
-        "username": "john_doe",
-        "profile_pic": "src/assets/profile1.jpeg"
-      },
+      "username": "john_doe",
+      "profile_pic": "src/assets/profile1.jpeg",
       "image": "src/assets/st1.jpeg"
     },
     {
       "id": 2,
-      "user": {
-        "id": 102,
-        "username": "alex_dev",
-        "profile_pic": "src/assets/profile2.jpeg"
-      },
+      "username": "alex_dev",
+      "profile_pic": "src/assets/profile2.jpeg",
       "image": "src/assets/st2.jpeg"
     },    {
       "id": 3,
-      "user": {
-        "id": 103,
-        "username": "_dev",
-        "profile_pic": "src/assets/profile3.jpeg"
-      },
+      "username": "_dev",
+      "profile_pic": "src/assets/profile3.jpeg",
       "image": "src/assets/st3.jpeg"
     }
   ]
