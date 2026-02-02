@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import { useParams } from "react-router-dom";
+import { useParams ,Link} from "react-router-dom";
 
 function View() {
   const { id } = useParams();
@@ -14,13 +14,15 @@ function View() {
 
   return (
     <div>
-      {story ? (
-        <div>
-          <img src={story.user.profile_pic}></img>
+      {story ? 
+        <div className="d-flex justify-content-center align-items-center m-2">
+           <Link><i class="bi bi-arrow-left-circle-fill"></i></Link>
+         <img className="vh-100 " src={story.image} alt="story"></img>
+          <Link><i class="bi bi-arrow-right-circle-fill"></i></Link>
         </div>
-      ) : (
+       : 
         <div>Loading....</div>
-      )}
+      }
     </div>
   );
 }
