@@ -10,7 +10,7 @@ const router = createBrowserRouter([
     element:<App />
   },
   {
-    path:'/view/:id',
+    path:'/view/:id/?tot',
     element:<View />
   }
 ])
