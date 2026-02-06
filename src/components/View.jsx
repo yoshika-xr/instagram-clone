@@ -1,10 +1,10 @@
 import React, { useState, useEffect } from "react";
-import { useParams ,Link,Navigate} from "react-router-dom";
+import { useParams ,Link,Navigate, useNavigate} from "react-router-dom";
 
 function View() {
   const { id,tot } = useParams();
   const [story, setstory] = useState(null);
-  const navigate=
+  const navigate=useNavigate();
 
   useEffect(() => {
     fetch(`http://localhost:3000/story/${id}`)
@@ -13,8 +13,8 @@ function View() {
       .catch((err) => console.log(err));
   }, [id]);
 
-  if(id >tot){
-    
+  if(id >tot || id <=0){
+    navigate('/');
   }
   return (
     <div>
