@@ -6,11 +6,14 @@ function Profile() {
   const [profile, setProfile] = useState(null);
 
   useEffect(() => {
-    axios.get('http://localhost:3000/profile')
-    .then((data) => {setProfile(data.data)});
+    axios.get("http://localhost:3000/profile").then((data) => {
+      setProfile(data.data);
+    });
     console.log(data);
-  });
-  return <div>Profile</div>;
+  }, []);
+  return (
+    <div>{profile ? <div>{profile.username}</div> : <div>Loading...</div>}</div>
+  );
 }
 
 export default Profile;
