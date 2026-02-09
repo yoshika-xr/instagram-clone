@@ -12,7 +12,10 @@ function Profile() {
     console.log(data);
   }, []);
   return (
-    <div>{profile ? <div>{profile.username}</div> : <div>Loading...</div>}</div>
+    <div>{profile ? <div>
+      <h1>{profile.username}</h1>
+      <img  src={profile.profile_pic} alt="profile"/>
+    </div> : <div>Loading...</div>}</div>
   );
 }
 
