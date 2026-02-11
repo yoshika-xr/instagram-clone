@@ -12,10 +12,12 @@ function Profile() {
     console.log(data);
   }, []);
   return (
-    <div>{profile ? <div>
-      <h1>{profile.username}</h1>
-      <img  src={profile.profile_pic} alt="profile"/>
-    </div> : <div>Loading...</div>}</div>
+    <div className="m-3">{profile ? <div>
+      <img className="profile rounded-circle"  src={profile.profile_pic} alt="profile"/>
+      <h1 className="">{profile.username}</h1>
+    </div> : <div>Loading...</div>}
+    <label>name:</label>
+    <input type="text" /></div>
   );
 }
 
