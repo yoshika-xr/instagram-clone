@@ -16,7 +16,7 @@ function Profile() {
       <img className="profile rounded-circle"  src={profile.profile_pic} alt="profile"/>
       <h1 className="">{profile.username}</h1>
     </div> : <div>Loading...</div>}
-    <label>name:</label>
+    {/* <label>name:</label> */}
     <input type="text" /></div>
   );
 }
