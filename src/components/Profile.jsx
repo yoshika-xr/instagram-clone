@@ -11,6 +11,13 @@ function Profile() {
     });
     console.log(data);
   }, []);
+  function HandleonChange(e) {
+    setProfile((prev) => ({
+      ...prev,
+      [e.target.name]: e.target.value,
+    }));
+  }
+
   return (
     <div className="m-3">
       {profile ? (
@@ -22,8 +29,20 @@ function Profile() {
           />
           <h1 className="">{profile.username}</h1>
           <label>name:</label>
-      <input type="text" value={profile.username} name="username" />
-      <input type="text" value={profile.profile_pic} name="profile_pic" />
+          <input
+            type="text"
+            value={profile.username}
+            name="username"
+            className="form-control my-3"
+            onChange={HandleonChange}
+          />
+          <input
+            type="text"
+            value={profile.profile_pic}
+            name="profile_pic"
+            className="form-control my-3"
+          />
+          <button className="btn btn-primary my-2">Update</button>
         </div>
       ) : (
         <div>Loading...</div>
