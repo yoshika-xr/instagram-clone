@@ -12,15 +12,23 @@ function Profile() {
     console.log(data);
   }, []);
   return (
-    <div className="m-3">{profile ? <div>
-      <img className="profile rounded-circle"  src={profile.profile_pic} alt="profile"/>
-      <h1 className="">{profile.username}</h1>
-    </div> : <div>Loading...</div>}
-    {/* <label>name:</label> */}
-    <input type="text" 
-    value={profile.username}
-    name="username"
-    /></div>
+    <div className="m-3">
+      {profile ? (
+        <div>
+          <img
+            className="profile rounded-circle"
+            src={profile.profile_pic}
+            alt="profile"
+          />
+          <h1 className="">{profile.username}</h1>
+          <label>name:</label>
+      <input type="text" value={profile.username} name="username" />
+      <input type="text" value={profile.profile_pic} name="profile_pic" />
+        </div>
+      ) : (
+        <div>Loading...</div>
+      )}
+    </div>
   );
 }
 
