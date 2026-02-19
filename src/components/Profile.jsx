@@ -17,7 +17,10 @@ function Profile() {
       <h1 className="">{profile.username}</h1>
     </div> : <div>Loading...</div>}
     {/* <label>name:</label> */}
-    <input type="text" /></div>
+    <input type="text" 
+    value={profile.username}
+    name="username"
+    /></div>
   );
 }
 
