@@ -17,7 +17,11 @@ function Profile() {
       [e.target.name]: e.target.value,
     }));
   }
-
+const handleUpdate=async()=>{
+  axios.post('http://localhost:3000/profile',profile)
+  .then(console.log("updated"))
+  .catch(err=>console.log(err));
+}
   return (
     <div className="m-3">
       {profile ? (
@@ -42,7 +46,7 @@ function Profile() {
             name="profile_pic"
             className="form-control my-3"
           />
-          <button className="btn btn-primary my-2">Update</button>
+          <button className="btn btn-primary my-2" >Update</button>
         </div>
       ) : (
         <div>Loading...</div>
