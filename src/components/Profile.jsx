@@ -4,13 +4,26 @@ import { data } from "react-router-dom";
 
 function Profile() {
   const [profile, setProfile] = useState(null);
+  const [followers, setFollowers] = useState([]);
 
   useEffect(() => {
-    axios.get("http://localhost:3000/profile").then((data) => {
-      setProfile(data.data);
-    });
-    console.log(data);
+    axios
+      .get("http://localhost:3000/profile")
+      .then((data) => {
+        setProfile(data.data);
+        console.log(data);
+      })
+      .catch((err) => console.log(err));
+
+    axios
+      .get("http://localhost:3000/followers")
+      .then((data) => {
+        setFollowers(data);
+      })
+      .catch((err) => console.log(err));
   }, []);
+
+  
   function HandleonChange(e) {
     setProfile((prev) => ({
       ...prev,
@@ -19,7 +32,7 @@ function Profile() {
   }
   const handleUpdate = async () => {
     axios
-      .get("http://localhost:3000/profile", profile)
+      .put("http://localhost:3000/profile", profile)
       .then(console.log("updated"))
       .catch((err) => console.log(err));
   };
