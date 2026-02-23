@@ -18,12 +18,11 @@ function Profile() {
     axios
       .get("http://localhost:3000/followers")
       .then((data) => {
-        setFollowers(data);
+        setFollowers(data.data);
       })
       .catch((err) => console.log(err));
   }, []);
 
-  
   function HandleonChange(e) {
     setProfile((prev) => ({
       ...prev,
@@ -67,6 +66,15 @@ function Profile() {
         </div>
       ) : (
         <div>Loading...</div>
+      )}
+      {followers.length > 0 ? (
+        followers.map((follower) => (
+          <div key={follower.userid}>
+            <h2>{follower.username}</h2>
+          </div>
+        ))
+      ) : (
+        <div>Loading..</div>
       )}
     </div>
   );
